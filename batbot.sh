@@ -5,7 +5,7 @@ VERSION="1.5.0"
 
 # default token and chatid
 # or run BaTbot with option: -t <token>
-TELEGRAMTOKEN="-YOUR-BOT-TOKEN-HERE-";
+TELEGRAMTOKEN=${TelegramBotToken}
 
 # how many seconds between check for new messages
 # or run Batbot with option: -c <seconds>
@@ -21,6 +21,8 @@ CHECKNEWMSG=2;
 declare -A botcommands
 botcommands=(
 
+	["/command"]='echo /ping /uptime /ip /df /vpn'
+
 	["/start"]='echo "Hi @FIRSTNAME, pleased to meet you :)"'
 
 	["/myid"]='echo Your user id is: @USERID'
@@ -30,6 +32,12 @@ botcommands=(
 	["/ping ([a-zA-Z0-9]+)"]='echo Pong: @R1'
 
 	["/uptime"]="uptime"
+
+	["/ip"]="ip a"
+
+	["/df"]="df -h"
+
+	["/vpn"]="/root/BaTbot/vpnState.sh"
 
 )
 
