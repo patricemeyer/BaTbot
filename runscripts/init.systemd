@@ -5,10 +5,9 @@ After=network.target
 [Service]
 User=batbot
 Group=batbot
-
-Type=forking
-GuessMainPID=no
 ExecStart=/opt/batbot/batbot.sh
+WorkingDirectory=/opt/batbot/
+Type=simple
 
 [Install]
 WantedBy=multi-user.target
