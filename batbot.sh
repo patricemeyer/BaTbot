@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ -e /etc/default/batbot ]
+then
+	source /etc/default/batbot
+fi
+
 # BaTbot current version
 VERSION="1.5.0"
 
