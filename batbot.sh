@@ -42,7 +42,7 @@ botcommands=(
 
 	["/df"]="df -h"
 
-	["/vpn"]="/root/BaTbot/vpnState.sh"
+	["/vpn"]="/opt/batbot/vpnState.sh"
 
 )
 
